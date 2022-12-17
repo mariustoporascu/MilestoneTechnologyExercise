@@ -16,7 +16,8 @@ namespace InMemoryStorageLibrary
             {
                 storage.Add(key, new List<object>());
             }
-            storage[key].Add(item);
+            if (storage[key].FirstOrDefault(obj=> item.Equals(obj)) == null)
+                storage[key].Add(item);
         }
         public void Remove<T>(T item)
         {

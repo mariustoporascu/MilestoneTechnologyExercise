@@ -10,7 +10,7 @@ namespace DataParserLibrary
     {
         public abstract T MapData(Dictionary<int, string> indexAndHeaderNames, string[] lineDataArray);
         public string[] SplitLineData(char delimiter, string lineData) => lineData.Split(delimiter);
-        public bool IsLineDataValid(string lineData) => !string.IsNullOrEmpty(lineData);
+        public bool IsLineDataValid(string lineData) => !string.IsNullOrWhiteSpace(lineData);
         public bool IsDelimiterValid(char delimiter) => delimiter != '\0';
     }
 }

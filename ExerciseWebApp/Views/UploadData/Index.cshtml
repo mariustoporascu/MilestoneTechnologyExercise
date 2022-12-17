@@ -1,0 +1,35 @@
+﻿@{
+	ViewData["Title"] = "Upload Data";
+}
+
+<form id="upload-form" method="post" enctype="multipart/form-data" asp-action="PostFilesAndConfiguration">
+	<div class="filesSelectDiv" id="filesSelectDiv">
+		<label for="files">Select Files:</label>
+		<input type="file" name="files" id="files" multiple>
+
+	</div>
+	<button type="button" id="add-files-button" class="add-button">Add Files</button>
+	<div id="file-list"></div>
+	<button id="submit-button" type="submit" class="submit-button" style="display:none;">Submit</button>
+</form>
+<!-- Add this template for each file item -->
+<template id="file-item-template">
+	<div class="file-item">
+		<div class="file-name"></div>
+		<div class="file-delimiter">
+			<label>Delimiter</label>
+			<select class="delimiter-select" name="delimiter">
+				<option value=",">Comma</option>
+				<option value="#">Hash</option>
+				<option value="-">Hyphen</option>
+			</select>
+		</div>
+		<div class="header-list"></div>
+		<button type="button" class="add-button add-header">Add Header</button>
+	</div>
+</template>
+
+@section Scripts {
+	<link rel="stylesheet" href="~/css/uploadData.css" asp-append-version="true" />
+	<script src="~/js/uploadData.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,121 @@
+#upload-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#upload-form .filesSelectDiv {
+    margin-bottom: 20px;
+}
+
+#upload-form label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#upload-form input[type="file"] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-top:5px;
+}
+
+#upload-form .submit-button {
+    width: 100%;
+    height: 40px;
+    background-color: #48bf00;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#upload-form .file-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#upload-form .file-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#upload-form .file-delimiter label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#upload-form .delimiter-select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#upload-form .header-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#upload-form .header-name-select {
+    flex: 1;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#upload-form .header-order-input {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#upload-form .add-button {
+    width: 100%;
+    height: 40px;
+    background-color: #f77f00;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#upload-form .arrow-button {
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+    margin: 5px;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+#upload-form .delete-button {
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+    margin: 5px;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    color: red;
+}

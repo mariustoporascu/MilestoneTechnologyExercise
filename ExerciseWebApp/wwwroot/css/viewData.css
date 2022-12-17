@@ -1,0 +1,54 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+.export-button {
+    display: inline-block;
+    float:right;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 1em 1.3em 0.3em 0;
+    border-radius: 0.52em;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #000000;
+    font-weight:700;
+    background-color: #74d49c;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.export-button:hover {
+    color: #000000;
+    background-color: #7295ea;
+}
+
+.export-button:active {
+    color: #000000;
+    background-color: #CCCCCC;
+}
+
+.unsorted::after {
+    content: ' -';
+}
+.asc::after {
+    content: ' \2191';
+}
+
+.desc::after {
+    content: ' \2193';
+}

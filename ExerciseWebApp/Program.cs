@@ -17,6 +17,8 @@ else
 {
     app.UseDeveloperExceptionPage();
 }
+app.UseStatusCodePagesWithRedirects("/Home/Error");
+
 app.UseStaticFiles();
 
 app.UseRouting();

@@ -16,5 +16,20 @@ namespace EntitiesLibrary
         public int? YearFounded { get; set; }
         public int? YearsInBusiness { get; set; }
         public Contact ContactDetails { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            // Check if the object is null or is not of the same type
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            // Cast the object to the derived type
+            Company other = (Company)obj;
+
+            // Compare the properties of the two objects
+            return CompanyName == other.CompanyName;
+        }
     }
 }
