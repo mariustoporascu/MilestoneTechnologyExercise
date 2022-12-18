@@ -2,35 +2,47 @@
 @{
 	ViewData["Title"] = "View Data";
 }
-<table>
-    <thead>
-        <tr>
-            <th data-sort="CompanyName" data-type="string" data-sort-preference="unsorted" class="unsorted">Company Name</th>
-            <th data-sort="YearsInBusiness" data-type="number" data-sort-preference="unsorted" class="unsorted">Years in Business</th>
-            <th data-sort="FullName" data-type="string" data-sort-preference="unsorted" class="unsorted">Contact Name</th>
-            <th data-sort="PhoneNumber" data-type="string" data-sort-preference="unsorted" class="unsorted">Contact Phone Number</th>
-            <th data-sort="Email" data-type="string" data-sort-preference="unsorted" class="unsorted">Contact Email</th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach (var company in Model)
-    {
-        <tr>
-            <td data-sort-by="CompanyName">@company.CompanyName</td>
-            <td data-sort-by="YearsInBusiness">@company.YearsInBusiness</td>
-            <td data-sort-by="FullName">@company.ContactDetails.FullName</td>
-            <td data-sort-by="PhoneNumber">@company.ContactDetails.PhoneNumber</td>
-            <td data-sort-by="Email">@company.ContactDetails.Email</td>
-        </tr>
-    }
-    </tbody>
-</table>
+@if (Model.Any())
+{
+	<div class="data-container">
+		<h5>To sort the data click on the header.</h5>
+		<table>
+			<thead>
+				<tr>
+					<th data-sort="CompanyName" data-type="string" data-sort-preference="unsorted" class="unsorted">Company Name</th>
+					<th data-sort="YearsInBusiness" data-type="number" data-sort-preference="unsorted" class="unsorted">Years in Business</th>
+					<th data-sort="FullName" data-type="string" data-sort-preference="unsorted" class="unsorted">Contact Name</th>
+					<th data-sort="PhoneNumber" data-type="string" data-sort-preference="unsorted" class="unsorted">Contact Phone Number</th>
+					<th data-sort="Email" data-type="string" data-sort-preference="unsorted" class="unsorted">Contact Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var company in Model)
+				{
+					<tr>
+						<td data-sort-by="CompanyName">@company.CompanyName</td>
+						<td data-sort-by="YearsInBusiness">@company.YearsInBusiness</td>
+						<td data-sort-by="FullName">@company.ContactDetails.FullName</td>
+						<td data-sort-by="PhoneNumber">@company.ContactDetails.PhoneNumber</td>
+						<td data-sort-by="Email">@company.ContactDetails.Email</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+		<a class="export-button">
+			Export to csv
+		</a>
+	</div>
+}
+else
+{
+	<div class="no-data-container">
+		<h2 class="no-data-message">No data in the system</h2>
+	</div>
+}
 
-<a class="export-button" asp-controller="ViewData" asp-action="ExportData">
-    Export to csv
-</a>
 @section Scripts {
 	<link rel="stylesheet" href="~/css/viewData.css" asp-append-version="true" />
-    <script src="~/js/viewData.js" asp-append-version="true"></script>
+	<script src="~/js/viewData.js" asp-append-version="true"></script>
 
 }
